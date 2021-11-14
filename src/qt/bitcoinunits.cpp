@@ -22,7 +22,6 @@ QList<CducoinUnits::Unit> CducoinUnits::availableUnits()
     unitlist.append(CDU);
     unitlist.append(mCDU);
     unitlist.append(uCDU);
-    unitlist.append(SAT);
     return unitlist;
 }
 
@@ -33,7 +32,6 @@ bool CducoinUnits::valid(int unit)
     case CDU:
     case mCDU:
     case uCDU:
-    case SAT:
         return true;
     default:
         return false;
@@ -47,7 +45,6 @@ QString CducoinUnits::longName(int unit)
     case CDU: return QString("CDU");
     case mCDU: return QString("mCDU");
     case uCDU: return QString::fromUtf8("µCDU (bits)");
-    case SAT: return QString("Satoshi (sat)");
     default: return QString("???");
     }
 }
@@ -57,7 +54,6 @@ QString CducoinUnits::shortName(int unit)
     switch(unit)
     {
     case uCDU: return QString::fromUtf8("bits");
-    case SAT: return QString("sat");
     default: return longName(unit);
     }
 }
@@ -69,7 +65,6 @@ QString CducoinUnits::description(int unit)
     case CDU: return QString("Cducoins");
     case mCDU: return QString("Milli-Cducoins (1 / 1" THIN_SP_UTF8 "000)");
     case uCDU: return QString("Micro-Cducoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -81,7 +76,6 @@ qint64 CducoinUnits::factor(int unit)
     case CDU: return 100000000;
     case mCDU: return 100000;
     case uCDU: return 100;
-    case SAT: return 1;
     default: return 100000000;
     }
 }
@@ -93,7 +87,6 @@ int CducoinUnits::decimals(int unit)
     case CDU: return 8;
     case mCDU: return 5;
     case uCDU: return 2;
-    case SAT: return 0;
     default: return 0;
     }
 }
