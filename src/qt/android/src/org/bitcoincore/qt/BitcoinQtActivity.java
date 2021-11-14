@@ -1,4 +1,4 @@
-package org.bitcoincore.qt;
+package org.cducoincore.qt;
 
 import android.os.Bundle;
 import android.system.ErrnoException;
@@ -8,14 +8,14 @@ import org.qtproject.qt5.android.bindings.QtActivity;
 
 import java.io.File;
 
-public class BitcoinQtActivity extends QtActivity
+public class CducoinQtActivity extends QtActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-        final File bitcoinDir = new File(getFilesDir().getAbsolutePath() + "/.bitcoin");
-        if (!bitcoinDir.exists()) {
-            bitcoinDir.mkdir();
+        final File cducoinDir = new File(getFilesDir().getAbsolutePath() + "/.cducoin");
+        if (!cducoinDir.exists()) {
+            cducoinDir.mkdir();
         }
 
         try {

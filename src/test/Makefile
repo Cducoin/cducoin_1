@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. bitcoin_test
+	$(MAKE) -C .. cducoin_test
 clean:
-	$(MAKE) -C .. bitcoin_test_clean
+	$(MAKE) -C .. cducoin_test_clean
 check:
-	$(MAKE) -C .. bitcoin_test_check
+	$(MAKE) -C .. cducoin_test_check

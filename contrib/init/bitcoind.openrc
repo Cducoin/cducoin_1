@@ -2,41 +2,41 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/bitcoin/.bitcoin" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/bitcoin/.bitcoin"
+if [ -d "/var/lib/cducoin/.cducoin" ]; then
+	CDUCOIND_DEFAULT_DATADIR="/var/lib/cducoin/.cducoin"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/bitcoind"
+	CDUCOIND_DEFAULT_DATADIR="/var/lib/cducoind"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/bitcoin/bitcoin.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/bitcoind}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/bitcoind.pid}
-BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-bitcoin}}
-BITCOIND_GROUP=${BITCOIND_GROUP:-bitcoin}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/bitcoind}
-BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
-BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
+CDUCOIND_CONFIGFILE=${CDUCOIND_CONFIGFILE:-/etc/cducoin/cducoin.conf}
+CDUCOIND_PIDDIR=${CDUCOIND_PIDDIR:-/var/run/cducoind}
+CDUCOIND_PIDFILE=${CDUCOIND_PIDFILE:-${CDUCOIND_PIDDIR}/cducoind.pid}
+CDUCOIND_DATADIR=${CDUCOIND_DATADIR:-${CDUCOIND_DEFAULT_DATADIR}}
+CDUCOIND_USER=${CDUCOIND_USER:-${CDUCOIN_USER:-cducoin}}
+CDUCOIND_GROUP=${CDUCOIND_GROUP:-cducoin}
+CDUCOIND_BIN=${CDUCOIND_BIN:-/usr/bin/cducoind}
+CDUCOIND_NICE=${CDUCOIND_NICE:-${NICELEVEL:-0}}
+CDUCOIND_OPTS="${CDUCOIND_OPTS:-${CDUCOIN_OPTS}}"
 
-name="Bitcoin Core Daemon"
-description="Bitcoin cryptocurrency P2P network daemon"
+name="Cducoin Core Daemon"
+description="Cducoin cryptocurrency P2P network daemon"
 
-command="/usr/bin/bitcoind"
-command_args="-pid=\"${BITCOIND_PIDFILE}\" \
-		-conf=\"${BITCOIND_CONFIGFILE}\" \
-		-datadir=\"${BITCOIND_DATADIR}\" \
+command="/usr/bin/cducoind"
+command_args="-pid=\"${CDUCOIND_PIDFILE}\" \
+		-conf=\"${CDUCOIND_CONFIGFILE}\" \
+		-datadir=\"${CDUCOIND_DATADIR}\" \
 		-daemon \
-		${BITCOIND_OPTS}"
+		${CDUCOIND_OPTS}"
 
-required_files="${BITCOIND_CONFIGFILE}"
-start_stop_daemon_args="-u ${BITCOIND_USER} \
-			-N ${BITCOIND_NICE} -w 2000"
-pidfile="${BITCOIND_PIDFILE}"
+required_files="${CDUCOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${CDUCOIND_USER} \
+			-N ${CDUCOIND_NICE} -w 2000"
+pidfile="${CDUCOIND_PIDFILE}"
 
 # The retry schedule to use when stopping the daemon. Could be either
 # a timeout in seconds or multiple signal/timeout pairs (like
 # "SIGKILL/180 SIGTERM/300")
-retry="${BITCOIND_SIGTERM_TIMEOUT}"
+retry="${CDUCOIND_SIGTERM_TIMEOUT}"
 
 depend() {
 	need localmount net
@@ -50,30 +50,30 @@ start_pre() {
 	checkpath \
 	-d \
 	--mode 0750 \
-	--owner "${BITCOIND_USER}:${BITCOIND_GROUP}" \
-	"${BITCOIND_DATADIR}"
+	--owner "${CDUCOIND_USER}:${CDUCOIND_GROUP}" \
+	"${CDUCOIND_DATADIR}"
 
 	checkpath \
 	-d \
 	--mode 0755 \
-	--owner "${BITCOIND_USER}:${BITCOIND_GROUP}" \
-	"${BITCOIND_PIDDIR}"
+	--owner "${CDUCOIND_USER}:${CDUCOIND_GROUP}" \
+	"${CDUCOIND_PIDDIR}"
 
 	checkpath -f \
-	-o "${BITCOIND_USER}:${BITCOIND_GROUP}" \
+	-o "${CDUCOIND_USER}:${CDUCOIND_GROUP}" \
 	-m 0660 \
-	"${BITCOIND_CONFIGFILE}"
+	"${CDUCOIND_CONFIGFILE}"
 
 	checkconfig || return 1
 }
 
 checkconfig()
 {
-	if grep -qs '^rpcuser=' "${BITCOIND_CONFIGFILE}" && \
-		! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
+	if grep -qs '^rpcuser=' "${CDUCOIND_CONFIGFILE}" && \
+		! grep -qs '^rpcpassword=' "${CDUCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run bitcoind."
-		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
+		eerror "ERROR: You must set a secure rpcpassword to run cducoind."
+		eerror "The setting must appear in ${CDUCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
 		eerror "and must not be the same as the rpcuser setting."
@@ -85,7 +85,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Bitcoin Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Cducoin Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

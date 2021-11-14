@@ -1,9 +1,9 @@
-// Copyright (c) 2021 The Bitcoin Core developers
+// Copyright (c) 2021 The Cducoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_RECEIVE_H
-#define BITCOIN_WALLET_RECEIVE_H
+#ifndef CDUCOIN_WALLET_RECEIVE_H
+#define CDUCOIN_WALLET_RECEIVE_H
 
 #include <amount.h>
 #include <wallet/ismine.h>
@@ -17,4 +17,4 @@ struct COutputEntry
     int vout;
 };
 
-#endif // BITCOIN_WALLET_RECEIVE_H
+#endif // CDUCOIN_WALLET_RECEIVE_H

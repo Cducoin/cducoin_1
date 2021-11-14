@@ -1,9 +1,9 @@
-// Copyright (c) 2020-2021 The Bitcoin Core developers
+// Copyright (c) 2020-2021 The Cducoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INDEX_COINSTATSINDEX_H
-#define BITCOIN_INDEX_COINSTATSINDEX_H
+#ifndef CDUCOIN_INDEX_COINSTATSINDEX_H
+#define CDUCOIN_INDEX_COINSTATSINDEX_H
 
 #include <chain.h>
 #include <crypto/muhash.h>
@@ -58,4 +58,4 @@ public:
 /// The global UTXO set hash object.
 extern std::unique_ptr<CoinStatsIndex> g_coin_stats_index;
 
-#endif // BITCOIN_INDEX_COINSTATSINDEX_H
+#endif // CDUCOIN_INDEX_COINSTATSINDEX_H

@@ -1,43 +1,43 @@
 22.0 Release Notes
 ==================
 
-Bitcoin Core version 22.0 is now available from:
+Cducoin Core version 22.0 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-22.0/>
+  <https://cducoincore.org/bin/cducoin-core-22.0/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/cducoin/cducoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://cducoincore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Cducoin-Qt` (on Mac)
+or `cducoind`/`cducoin-qt` (on Linux).
 
-Upgrading directly from a version of Bitcoin Core that has reached its EOL is
+Upgrading directly from a version of Cducoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Bitcoin Core are generally supported.
+wallet versions of Cducoin Core are generally supported.
 
 Compatibility
 ==============
 
-Bitcoin Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.14+, and Windows 7 and newer.  Bitcoin
+Cducoin Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.14+, and Windows 7 and newer.  Cducoin
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Bitcoin Core on
+frequently tested on them.  It is not recommended to use Cducoin Core on
 unsupported systems.
 
-From Bitcoin Core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
+From Cducoin Core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
 
 Notable changes
 ===============
@@ -113,4 +113,4 @@ Credits
 Thanks to everyone who directly contributed to this release:
 
 As well as to everyone that helped with translations on
-[Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+[Transifex](https://www.transifex.com/cducoin/cducoin/).

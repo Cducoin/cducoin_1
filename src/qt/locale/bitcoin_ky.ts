@@ -67,7 +67,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>CducoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -108,7 +108,7 @@
         <translation type="unfinished">&amp;Терезе</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Cducoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

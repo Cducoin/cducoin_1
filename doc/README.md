@@ -1,42 +1,42 @@
-Bitcoin Core
+Cducoin Core
 =============
 
 Setup
 ---------------------
-Bitcoin Core is the original Bitcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Bitcoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Cducoin Core is the original Cducoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Cducoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Bitcoin Core, visit [bitcoincore.org](https://bitcoincore.org/en/download/).
+To download Cducoin Core, visit [cducoincore.org](https://cducoincore.org/en/download/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Bitcoin Core on your native platform.
+The following are some helpful notes on how to run Cducoin Core on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/bitcoin-qt` (GUI) or
-- `bin/bitcoind` (headless)
+- `bin/cducoin-qt` (GUI) or
+- `bin/cducoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run bitcoin-qt.exe.
+Unpack the files into a directory, and then run cducoin-qt.exe.
 
 ### macOS
 
-Drag Bitcoin Core to your applications folder, and then run Bitcoin Core.
+Drag Cducoin Core to your applications folder, and then run Cducoin Core.
 
 ### Need Help?
 
-* See the documentation at the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
+* See the documentation at the [Cducoin Wiki](https://en.cducoin.it/wiki/Main_Page)
 for help and more information.
-* Ask for help on [Bitcoin StackExchange](https://bitcoin.stackexchange.com).
-* Ask for help on #bitcoin on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#bitcoin).
-* Ask for help on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Technical Support board](https://bitcointalk.org/index.php?board=4.0).
+* Ask for help on [Cducoin StackExchange](https://cducoin.stackexchange.com).
+* Ask for help on #cducoin on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#cducoin).
+* Ask for help on the [CducoinTalk](https://cducointalk.org/) forums, in the [Technical Support board](https://cducointalk.org/index.php?board=4.0).
 
 Building
 ---------------------
-The following are developer notes on how to build Bitcoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Cducoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -46,17 +46,17 @@ The following are developer notes on how to build Bitcoin Core on your native pl
 - [OpenBSD Build Notes](build-openbsd.md)
 - [NetBSD Build Notes](build-netbsd.md)
 - [Android Build Notes](build-android.md)
-- [Gitian Building Guide (External Link)](https://github.com/bitcoin-core/docs/blob/master/gitian-building.md)
+- [Gitian Building Guide (External Link)](https://github.com/cducoin-core/docs/blob/master/gitian-building.md)
 
 Development
 ---------------------
-The Bitcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Cducoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://doxygen.bitcoincore.org/)
+- [Source Code Documentation (External Link)](https://doxygen.cducoincore.org/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)
@@ -67,12 +67,12 @@ The Bitcoin repo's [root README](/README.md) contains relevant information on th
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Development & Technical Discussion board](https://bitcointalk.org/index.php?board=6.0).
-* Discuss project-specific development on #bitcoin-core-dev on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#bitcoin-core-dev).
+* Discuss on the [CducoinTalk](https://cducointalk.org/) forums, in the [Development & Technical Discussion board](https://cducointalk.org/index.php?board=6.0).
+* Discuss project-specific development on #cducoin-core-dev on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#cducoin-core-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [bitcoin.conf Configuration File](bitcoin-conf.md)
+- [cducoin.conf Configuration File](cducoin-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
 - [I2P Support](i2p.md)

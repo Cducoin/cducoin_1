@@ -1,5 +1,12 @@
-Bitcoin Core integration/staging tree
+Cducoin Core integration/staging tree
 =====================================
+
+https://github.com/cducoin/cducoin
+
+What is Cducoin?
+----------------
+
+Cducoin is a project fork of bitcoin core 0.22. For more information on Bitcoin visit 
 
 https://bitcoincore.org
 
